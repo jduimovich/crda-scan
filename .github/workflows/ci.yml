@@ -1,0 +1,37 @@
+# CI Test - Build the action container
+# build test container which has default test files and validate
+name: CI
+on: [push]  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: CRDA Scan
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v2 
+      - name: Run CRDA and Convert to Sarif
+        uses: jduimovich/crda-sarif-poc@main
+        with:
+          input-file-name: package.json
+          snyk-token: ${{ secrets.SNYK_TOKEN }}
+          output-file-name: output.sarif
+      - name: Show CRDA and Sarif outputs
+        run: |  
+          echo CRDA JSON output
+          cat crda.json  | jq 
+          echo CRDA sarif output
+          cat output.sarif  | jq 
+      - name: Upload result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: output.sarif
+      - name: Save Intermediate files
+        run: |  
+          mkdir -p uploads
+          mv output.sarif uploads 
+          mv crda.json uploads 
+      - name: Upload merged Results  
+        uses: actions/upload-artifact@v2
+        with: 
+          name: workfiles
+          path: ./uploads

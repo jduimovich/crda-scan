@@ -1,7 +1,12 @@
-"# crda-scan" 
+CRDA to Sarif converter demo
 
-This demonstrates the use of the CRDA CLI to scan the package.json file for vulnerabilities.
+This demonstrates the use of the CRDA CLI  to scan the package.json file for vulnerabilities.
 The file includes two known issues for the demo.
+
+You can find the CRDA CLI here 
+[link to CRDA!](https://github.com/fabric8-analytics/cli-tools/releases/tag/v0.0.1) 
+ 
+
 
 ![Issues Found](crda.png)
 

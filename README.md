@@ -1,7 +1,7 @@
 CRDA to Sarif converter demo
 
 This demonstrates the use of the CRDA CLI  to scan the package.json file for vulnerabilities and upload to the code-ql security service.
-The CRDA file outputs a json payload and this action converts it to eb used with code-ql. 
+The CRDA file outputs a json payload and this action converts it to SARIF so it can be used with code-ql. 
  
 The file includes two known issues for the demo.
 

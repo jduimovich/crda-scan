@@ -3,6 +3,9 @@
 This demonstrates the use of the CRDA CLI to scan the package.json file for vulnerabilities.
 The file includes two known issues for the demo.
 
+![Issues Found](crda.png)
+
+
 See the sample workflow here
 ```
 https://github.com/jduimovich/crda-scan/blob/main/.github/workflows/ci.yml

@@ -1,7 +1,8 @@
 CRDA to Sarif converter demo
 
 This demonstrates the use of the CRDA CLI  to scan the package.json file for vulnerabilities and upload to the code-ql security service.
-This uses the action 
+The CRDA file outputs a json payload and this action converts it to eb used with code-ql. 
+ 
 The file includes two known issues for the demo.
 
 You can find the [CRDA CLI here !](https://github.com/fabric8-analytics/cli-tools/releases/tag/v0.0.1) 

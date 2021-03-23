@@ -9,7 +9,7 @@ The repository only includes the package.json file and is not executable to prev
 
 You can find the [CRDA CLI here !](https://github.com/fabric8-analytics/cli-tools/releases/tag/v0.0.1) 
 
-To use it, use `jduimovich/crda-sarif-poc@main` in a workflow, as per this yaml. This demo will only check checks package.json.
+To use it, use `jduimovich/crda-sarif-poc@main` in a workflow, as per this yaml. This demo will only check package.json but the CLI will check other formats.
  
 ```
 - name: Run CRDA and Convert to Sarif

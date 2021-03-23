@@ -1,4 +1,4 @@
-#Code Ready Dependency Analytics to Sarif demo
+# Code Ready Dependency Analytics to Sarif demo
 
 This demonstrates the use of the CRDA CLI to scan the package.json file for vulnerabilities and upload to the github code-ql security service.
 
@@ -38,18 +38,18 @@ gh secret set SNYK_TOKEN -b <your secret token>
 
 You can find more vulerabilties to validate here at [https://www.npmjs.com/advisories](https://www.npmjs.com/advisories)
 
-#Demo
-To demonstrate vulnerabilties, add a known package like the following.
+# Demo
+To demonstrate vulnerabilties, add a package with a known vulnerability to package.json. 
 
     "msgpack5": "5.2.0"
 
-to package.json
 
 You can find more vulerabilties to validate here [https://www.npmjs.com/advisories](https://www.npmjs.com/advisories)
 
-Note msgpack5 is fixed in 5.2.1 so you can update, push the fix and test the CI workflow.
+Note msgpack5 is fixed in 5.2.1 so you can update, push the fix and test the CI workflow after a fix.
 
 You can view produced files online in the uploaded files section for the actions.
+
 There will be two files `crda.json` and the converted `crda.sarif`
 
 You can view the sarif file in many ways

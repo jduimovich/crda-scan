@@ -14,21 +14,21 @@ jobs:
         with:
           input-file-name: package.json
           snyk-token: ${{ secrets.SNYK_TOKEN }}
-          output-file-name: output.sarif
+          output-file-name: crda.sarif
       - name: Show CRDA and Sarif outputs
         run: |  
           echo CRDA JSON output
           cat crda.json  | jq 
           echo CRDA sarif output
-          cat output.sarif  | jq 
+          cat crda.sarif  | jq 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v1
         with:
-          sarif_file: output.sarif
+          sarif_file: crda.sarif
       - name: Save Intermediate files
         run: |  
           mkdir -p uploads
-          mv output.sarif uploads 
+          mv crda.sarif uploads 
           mv crda.json uploads 
       - name: Upload merged Results  
         uses: actions/upload-artifact@v2

@@ -1,7 +1,7 @@
 # CI Test - Build the action container
 # build test container which has default test files and validate
 name: CI
-on: [push]  
+on: [pull_request]  
 jobs:
   test:
     runs-on: ubuntu-latest

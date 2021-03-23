@@ -1,6 +1,6 @@
 # Code Ready Dependency Analytics to Sarif demo
 
-This demonstrates the use of the CRDA CLI to scan the package.json file for vulnerabilities and upload to the github code-ql security service.
+This demonstrates the use of the [CRDA CLI](https://github.com/fabric8-analytics/cli-tools/blob/main/docs/cli_README.md) to scan the package.json file for vulnerabilities and upload to the github code-ql security service.
 
 The CRDA CLI outputs a json payload and this demo uses a github action to converts the CRDA format to SARIF so it can be used with code-ql. 
  

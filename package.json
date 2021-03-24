@@ -6,6 +6,7 @@
   "dependencies": {
     "urijs": "1.19.5",
     "pug": "3.0.0" ,
-    "set-in": "2.0.0"
+    "set-in": "2.0.0",
+    "madge": "4.0.0"
   }
 }

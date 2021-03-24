@@ -21,7 +21,7 @@ jobs:
           cat crda.json  | jq 
           echo CRDA sarif output
           cat crda.sarif  | jq 
-          set TV=$(cat crda.json | jq .total_direct_vulnerabilities)
+          export TV=$(cat crda.json | jq .total_direct_vulnerabilities)
           if [ "$TV" -neq "0" ]; then
             echo "FAILED";
             exit $TV;

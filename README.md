@@ -24,10 +24,8 @@ The result can be found in the security tab.
           
 ![Issues Found](crda.png)
 
-See the file workflow example here.
-```
-https://github.com/jduimovich/crda-scan/blob/main/.github/workflows/ci.yml
-```
+See the workflow example here [https://github.com/jduimovich/crda-scan/blob/main/.github/workflows/ci.yml](https://github.com/jduimovich/crda-scan/blob/main/.github/workflows/ci.yml)
+
 
 To test this, you can fork this repo, enable the workflow in the Github Actions tab and set a secret `SNYK_TOKEN`. You can do this in the Github UI or via the gh cmd line.
 To get a snyk token, goto [snyk.io!](https://snyk.io/). 

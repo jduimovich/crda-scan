@@ -1,6 +1,6 @@
 # CI Test - Build the action container
 # build test container which has default test files and validate
-name: CI
+name: CI-PR
 on: [pull_request]  
 jobs:
   test:
